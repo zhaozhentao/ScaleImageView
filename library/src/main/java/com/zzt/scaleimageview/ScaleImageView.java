@@ -3,7 +3,9 @@ package com.zzt.scaleimageview;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.zzt.interfaces.ScaleListener;
@@ -11,7 +13,7 @@ import com.zzt.interfaces.ScaleListener;
 /**
  * Created by zzt on 2015/3/19.
  */
-public class ScaleImageView extends RelativeLayout {
+public class ScaleImageView extends FrameLayout {
 
     private ScaleImageViewContent scaleImageViewContent;
     public ScaleImageView(Context context) {
@@ -39,6 +41,8 @@ public class ScaleImageView extends RelativeLayout {
                 close();
             }
         });
+
+        setLayerType(LAYER_TYPE_HARDWARE, null);
     }
 
     public void open(ImageView imageView){

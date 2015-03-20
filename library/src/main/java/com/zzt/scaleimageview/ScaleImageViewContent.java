@@ -7,7 +7,9 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.zzt.interfaces.ScaleListener;
@@ -17,7 +19,7 @@ import com.zzt.interfaces.ScaleListener;
  */
 public class ScaleImageViewContent extends ImageView{
 
-    private static final int DEFAULT_ANIM_DURATION = 250;
+    private static final int DEFAULT_ANIM_DURATION = 300;
 
     private View parent;
     private ValueAnimator animator;
@@ -41,7 +43,7 @@ public class ScaleImageViewContent extends ImageView{
     private int mParentWidth;
     private int mParentHeight;
 
-    private RelativeLayout.LayoutParams mLayoutParams;
+    private FrameLayout.LayoutParams mLayoutParams;
 
     private int[] location;
     private int[] parentLocation;
@@ -69,7 +71,6 @@ public class ScaleImageViewContent extends ImageView{
     }
 
     private void init(){
-        setVisibility(INVISIBLE);
 
         animator = ValueAnimator.ofFloat(0, 0);
         animator.setDuration(DEFAULT_ANIM_DURATION);
@@ -78,7 +79,7 @@ public class ScaleImageViewContent extends ImageView{
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float value = (Float) animation.getAnimatedValue();
-                parent.setBackgroundColor(Color.argb( (int)(mBgAlpha * value), 0, 0, 0));
+                parent.setBackgroundColor((int)(mBgAlpha * value)<< 24);
                 mLayoutParams.topMargin = (int) ( mMarginTop + ( mDrawableFinalMarginTop - mMarginTop) * value);
                 mLayoutParams.leftMargin = (int) (mMarginLeft * (1.0f - value));
                 mLayoutParams.width = (int) (mOriginalWidth + (mParentWidth - mOriginalWidth) * value);
@@ -98,6 +99,7 @@ public class ScaleImageViewContent extends ImageView{
 
                 }else{
                     mScaleListener.onClosedEnd();
+                    ScaleImageViewContent.this.setImageDrawable(null);
                 }
             }
 
@@ -127,7 +129,7 @@ public class ScaleImageViewContent extends ImageView{
         parentLocation = getViewWindowLocation(parent);
         location[1] = location[1] - parentLocation[1];
 
-        mLayoutParams = (RelativeLayout.LayoutParams)getLayoutParams();
+        mLayoutParams = (FrameLayout.LayoutParams)getLayoutParams();
         mMarginTop = location[1] - parent.getPaddingTop();
         mMarginLeft = location[0];
         //放大前的图片的宽高
@@ -143,7 +145,6 @@ public class ScaleImageViewContent extends ImageView{
         setLayoutParams(mLayoutParams);
 
         setImageDrawable(imageView.getDrawable());
-        invalidate();
 
         final int drawableWidth = getDrawable().getIntrinsicWidth();
         final int drawableHeight = getDrawable().getIntrinsicHeight();
@@ -153,10 +154,8 @@ public class ScaleImageViewContent extends ImageView{
                 Math.round((float) mDrawableFinalWidth / (float) drawableWidth * (float) drawableHeight));
         mDrawableFinalMarginTop = Math.max(0,
                 (mParentHeight - mDrawableFinalHeight)/2 );
-        setVisibility(VISIBLE);
 
         mIsOpen = true;
-        mOriginImageView.setVisibility(INVISIBLE);
         animator.setFloatValues(0, 1.0f);
         animator.start();
     }
@@ -165,7 +164,6 @@ public class ScaleImageViewContent extends ImageView{
         if(animator.isRunning())
             return;
 
-        mOriginImageView.setVisibility(VISIBLE);
         mIsOpen = false;
         animator.setFloatValues(1.0f, 0);
         animator.start();
