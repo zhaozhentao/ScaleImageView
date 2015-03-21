@@ -37,6 +37,8 @@ public class ScaleImageView extends ImageView {
     private int finalLeft;
 
     private int[] mLocation = new int[2];
+    private int[] srcLocation = new int[2];
+    private int[] parentLocation = new int[2];
 
     private int mWindowHeight;
 
@@ -125,6 +127,7 @@ public class ScaleImageView extends ImageView {
             parentView = (View)getParent();
             parentWidth = parentView.getWidth();
             parentHeight = parentView.getHeight();
+            parentView.getLocationInWindow(parentLocation);
         }
 
         Drawable drawable = srcImageView.getDrawable();
@@ -138,15 +141,9 @@ public class ScaleImageView extends ImageView {
         else
             scaleDirection = HORIZON;
 
-        //beginTop = srcImageView.getTop();
-        //beginLeft = srcImageView.getLeft();
-        int[] srcLocation = new int[2];
         srcImageView.getLocationInWindow(srcLocation);
-        int[] parentLocation = new int[2];
-        parentView.getLocationInWindow(parentLocation);
         beginLeft = srcLocation[0] - parentLocation[0];
         beginTop = srcLocation[1] - parentLocation[1];
-
 
         if(scaleDirection == VERTICAL){
             finalTop = 0;
@@ -175,10 +172,6 @@ public class ScaleImageView extends ImageView {
         return super.setFrame(left, top, right+left, bottom+top);
     }
 
-    private void getLocationInWindow(View view){
-        view.getLocationInWindow(mLocation);
-    }
-
     public void setWindowHeight(int windowHeight){
         mWindowHeight = windowHeight;
     }
@@ -186,7 +179,7 @@ public class ScaleImageView extends ImageView {
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         if(false == mFirstAnimPlay)
-            getLocationInWindow(this);
+            getLocationInWindow(mLocation);
         super.onLayout(changed, left, top, right, bottom);
     }
 }
