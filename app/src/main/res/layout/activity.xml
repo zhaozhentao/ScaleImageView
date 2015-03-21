@@ -3,28 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pic1"/>
-        <ImageView
-            android:id="@+id/img2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pic"/>
-    </LinearLayout>
-
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pic1"/>
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pic"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pic1"/>
+        </LinearLayout>
+    </ScrollView>
     <FrameLayout
         android:clickable="true"
         android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <com.zzt.scaleimageview.MyImageView
+        <com.zzt.scaleimageview.ScaleImageView
             android:id="@+id/img1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
