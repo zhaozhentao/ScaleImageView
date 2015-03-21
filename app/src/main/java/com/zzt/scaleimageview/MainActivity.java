@@ -9,20 +9,15 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends ActionBarActivity {
 
-    ScaleImageView scaleImageView;
-    ImageView imageView;
-    ImageView imageView1;
-    RelativeLayout relativeLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity);
+        final ImageView imageView1 = (ImageView)findViewById(R.id.img);
+        final ImageView imageView2 = (ImageView)findViewById(R.id.img2);
+        final ScaleImageView scaleImageView = (ScaleImageView)findViewById(R.id.img1);
 
-/*
-        scaleImageView = (ScaleImageView)findViewById(R.id.scaleimageiew);
-        imageView = (ImageView)findViewById(R.id.img);
-        imageView1 = (ImageView)findViewById(R.id.img1);
+        scaleImageView.setWindowHeight(getWindowManager().getDefaultDisplay().getHeight());
 
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,31 +25,10 @@ public class MainActivity extends ActionBarActivity {
                 scaleImageView.open(imageView1);
             }
         });
-
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scaleImageView.open(imageView);
-            }
-        });
-*/
-
-        setContentView(R.layout.activity);
-        final ImageView imageView2 = (ImageView)findViewById(R.id.img);
-        final MyImageView imageView3 = (MyImageView)findViewById(R.id.img1);
-        final ImageView imageView4 = (ImageView)findViewById(R.id.img2);
-        imageView3.setWindowHeight(getWindowManager().getDefaultDisplay().getHeight());
-
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imageView3.open(imageView2);
-            }
-        });
-        imageView4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                imageView3.open(imageView4);
+                scaleImageView.open(imageView2);
             }
         });
 

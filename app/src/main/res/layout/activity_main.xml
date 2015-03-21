@@ -22,7 +22,7 @@
             android:src="@drawable/pic1"/>
     </LinearLayout>
 
-    <com.zzt.scaleimageview.ScaleImageView
+    <com.zzt.scaleimageview.ScaleImageView1
         android:id="@+id/scaleimageiew"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
