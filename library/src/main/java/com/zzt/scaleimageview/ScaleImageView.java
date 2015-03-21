@@ -10,7 +10,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 
 /**
- * Created by Administrator on 2015/3/20.
+ * Created by zzt on 2015/3/20.
  */
 public class ScaleImageView extends ImageView {
 
