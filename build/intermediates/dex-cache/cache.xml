@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="F:\MyOpenSourceProject\ScaleImageView\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jar="C:\Users\Administrator\Desktop\scale\app\build\intermediates\exploded-aar\scale\library\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="F:\MyOpenSourceProject\ScaleImageView\app\build\intermediates\pre-dexed\debug\classes-94cad600cdee374b81433a5ed31bdb687a56c970.jar" />
+        sha1="fe52e0701fa3d307be8195e55055f7fbbafd78ae">
+        <dex dex="C:\Users\Administrator\Desktop\scale\app\build\intermediates\pre-dexed\debug\classes-56af41661935201173fbba62f569ddafd133ddc8.jar" />
     </item>
     <item
-        jar="F:\MyOpenSourceProject\ScaleImageView\app\build\intermediates\exploded-aar\ScaleImageView\library\unspecified\classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="6c7d302cb1c562290b285e310629987724be1ab0">
-        <dex dex="F:\MyOpenSourceProject\ScaleImageView\app\build\intermediates\pre-dexed\debug\classes-4b2be3931aeae6787eb96eea55acd09d62999083.jar" />
-    </item>
-    <item
-        jar="F:\android studio sdk\android studio sdk\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="F:\MyOpenSourceProject\ScaleImageView\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-3c03adf504ec29a2134a28ca279e6edc30c0d0b3.jar" />
-    </item>
-    <item
-        jar="F:\MyOpenSourceProject\ScaleImageView\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="F:\MyOpenSourceProject\ScaleImageView\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-90d9c58c6ce7e2b91f69d5d1fbbfe4de34a1b565.jar" />
-    </item>
-    <item
-        jar="F:\MyOpenSourceProject\ScaleImageView\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jar="C:\Users\Administrator\Desktop\scale\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="F:\MyOpenSourceProject\ScaleImageView\app\build\intermediates\pre-dexed\debug\classes-4f57c0127560575ad57753677d8432b86277aa92.jar" />
+        <dex dex="C:\Users\Administrator\Desktop\scale\app\build\intermediates\pre-dexed\debug\classes-9cffa7a0846975f825b2dc556de7932e2896eccc.jar" />
+    </item>
+    <item
+        jar="H:\AndroidDev\androidsdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Administrator\Desktop\scale\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-3b18b89c8e2a5cbacdc53d723c1b6766ab5ae106.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\scale\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Administrator\Desktop\scale\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-152ba3e10d894ad4748461d39b9d66e4c66d92dc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\scale\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Administrator\Desktop\scale\app\build\intermediates\pre-dexed\debug\classes-f32a0925bb3648be2e2ad6f6d332f66031304e23.jar" />
     </item>
 
 </items>
