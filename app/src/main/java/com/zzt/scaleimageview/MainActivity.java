@@ -14,7 +14,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity);
 
-        int test;
         final ImageView imageView1 = (ImageView)findViewById(R.id.img);
         final ImageView imageView2 = (ImageView)findViewById(R.id.img2);
         final ScaleImageView scaleImageView = (ScaleImageView)findViewById(R.id.img1);
