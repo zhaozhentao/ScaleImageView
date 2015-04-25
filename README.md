@@ -6,3 +6,5 @@
 ![image](https://github.com/zhaozhentao/ScaleImageView/blob/master/screenshot/screen1.gif)
 
 
+
+
